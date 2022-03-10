@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+/* Базовые стили */
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 175px;
+    background-color: black;
+    box-shadow: -1px 0px 2px #444;  
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    top: 50%;
+    left: 0%;
+
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+    transition: .5s ease;
+
+  }
+  /* Формируем правую часть */
+  .heart:before {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: black;
+    box-shadow: 0px 3px 3px #444444; 
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
+    transition: .5s ease;
+  }
+  /* Убираем тень при наведении
+  .heart:hover:before, .heart:hover{
+      box-shadow:none;
+  } */
+
+.heart:nth-child(2) {
+    left: 220px;
+}
+.heart:nth-child(3) {
+    left: 440px;
+}
+
+.active {
+    background-color: red;
+}
+.active:before {
+    background-color: red;
+}
